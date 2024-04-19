@@ -113,10 +113,10 @@ const merge = <T, U>(a: T, b: U) => {
     ...b
   };
 };
-// Define types for T & U when calling the function
-const merged = merge({ level: 50, health: 99 }, { ammo: 69 });
 // Can reuse code in such a way
 const newUser = merge<{ name: string }, { age: number }>(
   { name: 'Dan' },
   { age: 37 }
 );
+// Define types for T & U when calling the function
+const merged = merge({ level: 50, health: 99 }, { ammo: 69 });
