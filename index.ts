@@ -48,6 +48,9 @@ const calculate = (a: number, b: number, calcFn: AddFn): number => {
 interface User {
   name: string;
   age: number;
+}
+// Can be easily extended unlike custom types
+interface User {
   isAdmin: boolean;
   id: string | number;
 }
