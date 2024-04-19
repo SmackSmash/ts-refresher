@@ -38,6 +38,10 @@ const add = (a: number, b: number): number => {
   return a + b;
 };
 // Functions as params
-const calculate = (a: number, b: number, calcFn: (a: number, b:number) => number): number{
-  return calcFn(a, b)
-}
+const calculate = (
+  a: number,
+  b: number,
+  calcFn: (a: number, b: number) => number
+): number => {
+  return calcFn(a, b);
+};
