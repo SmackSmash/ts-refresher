@@ -44,7 +44,7 @@ const calculate = (a: number, b: number, calcFn: AddFn): number => {
   return calcFn(a, b);
 };
 
-// Interfaces
+// Interfaces for objects
 interface User {
   name: string;
   age: number;
@@ -52,6 +52,23 @@ interface User {
   id: string | number;
 }
 
+const person: User = {
+  name: 'Steve',
+  age: 45,
+  isAdmin: false,
+  id: 746
+};
+
 const sayName = ({ name }: User): void => {
   console.log(`Hi ${name}`);
 };
+
+// Classes and interfaces
+class Person implements User {
+  constructor(
+    public name: string,
+    public age: number,
+    public isAdmin: boolean,
+    public id: string | number
+  ) {}
+}
