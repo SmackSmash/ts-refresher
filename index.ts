@@ -102,7 +102,7 @@ type DataStorage<T> = {
 // String used instead of placeholder 'T'
 const textStorage: DataStorage<string> = {
   storage: ['yes', 'no', 'maybe'],
-  add: (data: string): void => {
-    // Do something...
+  add: (data): void => {
+    // data inferred to string from initial T argument
   }
 };
