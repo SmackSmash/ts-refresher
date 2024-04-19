@@ -49,7 +49,7 @@ interface User {
   name: string;
   age: number;
 }
-// Can be easily extended unlike custom types
+// Can be easily extended unlike custom types - declaration merging
 interface User {
   isAdmin: boolean;
   id: string | number;
@@ -75,3 +75,7 @@ class Person implements User {
     public id: string | number
   ) {}
 }
+
+// Literal types
+let role: 'admin' | 'user' | 'editor';
+role = 'admin';
