@@ -25,3 +25,10 @@ const user: {
 let hobbies: string[];
 // let hobbies: Array<string> Alternatively
 hobbies = ['Sports', 'Cooking', 'Reading'];
+
+// Object arrays
+let people: { name: string; age: number }[];
+people = [
+  { name: 'Dan', age: 37 },
+  { name: 'Steve', age: 65 }
+];
