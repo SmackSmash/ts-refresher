@@ -99,7 +99,7 @@ type DataStorage<T> = {
   storage: T[];
   add: (data: T) => void;
 };
-
+// String used instead of placeholder 'T'
 const textStorage: DataStorage<string> = {
   storage: ['yes', 'no', 'maybe'],
   add: (data: string): void => {
