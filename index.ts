@@ -82,9 +82,27 @@ type Role = 'admin' | 'user' | 'editor';
 let role: Role;
 role = 'admin';
 
-const performAction = (action: string, role: Role) => {
+const performAction = (role: Role) => {
   // Typeguarding
   if (role === 'admin') {
+    // Do something...
+  }
+};
+
+// Generic types, can make custom ones unlike e.g. Role[]
+let roles: Array<Role>;
+
+roles = ['user'];
+roles.push('admin');
+// Argument 'T' for type, as placeholder to be used in future
+type DataStorage<T> = {
+  storage: T[];
+  add: (data: T) => void;
+};
+
+const textStorage: DataStorage<string> = {
+  storage: ['yes', 'no', 'maybe'],
+  add: (data: string): void => {
     // Do something...
   }
 };
