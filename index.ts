@@ -37,11 +37,21 @@ people = [
 const add = (a: number, b: number): number => {
   return a + b;
 };
-// Functions as params
-const calculate = (
-  a: number,
-  b: number,
-  calcFn: (a: number, b: number) => number
-): number => {
+// Functions as params and type alias
+type AddFn = (a: number, b: number) => number;
+
+const calculate = (a: number, b: number, calcFn: AddFn): number => {
   return calcFn(a, b);
+};
+
+// Interfaces
+interface User {
+  name: string;
+  age: number;
+  isAdmin: boolean;
+  id: string | number;
+}
+
+const sayName = ({ name }: User): void => {
+  console.log(`Hi ${name}`);
 };
