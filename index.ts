@@ -77,5 +77,14 @@ class Person implements User {
 }
 
 // Literal types
-let role: 'admin' | 'user' | 'editor';
+type Role = 'admin' | 'user' | 'editor';
+
+let role: Role;
 role = 'admin';
+
+const performAction = (action: string, role: Role) => {
+  // Typeguarding
+  if (role === 'admin') {
+    // Do something...
+  }
+};
