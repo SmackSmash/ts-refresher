@@ -32,3 +32,8 @@ people = [
   { name: 'Dan', age: 37 },
   { name: 'Steve', age: 65 }
 ];
+
+// Functions
+const add = (a: number, b: number): number => {
+  return a + b;
+};
